@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: minmax(0, 1fr) 28px;
-  height: 700px;
+  height: clamp(700px, 46vw, 860px);
   border: 1px solid var(--line-strong);
   background: var(--ground);
   color: var(--secondary);

@@ -236,3 +236,19 @@ export const INSTALL_STEPS = [
   { cmd: "./target/debug/des-comp", note: "the whole desktop, in a window" },
   { cmd: "./install.sh", note: "then choose DEs-UI on the login screen" },
 ];
+
+export const EDEX = "https://github.com/GitSquared/edex-ui";
+
+/** eDEX-UI beside DEs-UI: what, the first, the second. */
+export const LINEAGE: [string, string, string][] = [
+  ["What it is", "A fullscreen terminal application", "A desktop: its own login session"],
+  ["Runs", "Inside your existing desktop", "In place of it, with its own Wayland compositor"],
+  ["Built with", "Electron (JavaScript)", "Rust"],
+  ["Platforms", "Windows, macOS, Linux", "Linux"],
+  ["Other applications", "Stay outside, behind it", "Open inside the frame"],
+  ["Settings, lock, login", "Belong to the desktop under it", "Its own"],
+  ["Themes", "Its own JSON format", "The same format; eDEX-UI themes work"],
+  ["On-screen keyboard, sounds", "Yes", "Not yet"],
+  ["Licence", "GPL-3.0", "MIT"],
+  ["Status", "Archived in 2021", "In development"],
+];

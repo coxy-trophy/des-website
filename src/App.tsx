@@ -6,7 +6,9 @@ import { Keys } from "./components/Keys";
 import { Nav } from "./components/Nav";
 import { NotDone } from "./components/NotDone";
 import { Programs } from "./components/Programs";
+import { Lineage } from "./components/Lineage";
 import { Signal } from "./components/Signal";
+import { Splash } from "./components/Splash";
 import { StatusStrip } from "./components/StatusStrip";
 import { Tour } from "./components/Tour";
 import { WaysOut } from "./components/WaysOut";
@@ -14,6 +16,7 @@ import { WaysOut } from "./components/WaysOut";
 export function App() {
   return (
     <>
+      <Splash />
       <Nav />
       <main>
         <Hero />
@@ -24,6 +27,7 @@ export function App() {
         <Signal />
         <WaysOut />
         <NotDone />
+        <Lineage />
         <Install />
       </main>
       <Footer />

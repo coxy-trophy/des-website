@@ -1050,6 +1050,126 @@ kbd {
   letter-spacing: 0.1em;
 }
 
+/* ---- Lineage ---- */
+
+.lineage > div {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 4fr) minmax(0, 4fr);
+  gap: 24px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.lineage > div:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.lineage [role="rowheader"] {
+  color: var(--label);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lineage [role="cell"]:last-child {
+  color: var(--text);
+}
+
+.lineage-head {
+  border-top: 0 !important;
+  font: 600 13px/1 var(--display) !important;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.lineage-head span:last-child {
+  color: var(--accent);
+}
+
+/* ---- The splash ---- */
+
+.splash {
+  --name: 72px;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 44px;
+  background: var(--ground);
+  transition: opacity 0.26s linear;
+}
+
+.splash[data-fading="true"] {
+  opacity: 0;
+}
+
+.splash-name {
+  color: var(--text);
+  font: 600 calc(var(--name) * 0.82) / var(--name) var(--display);
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.splash-name b {
+  color: var(--accent);
+  font-weight: inherit;
+}
+
+/* The name is cut into strips, which a glitch pushes apart. */
+.splash-strip {
+  position: relative;
+  /* A root of its own, so the span's negative margin stays inside it. */
+  display: flow-root;
+  height: calc(var(--name) / 9);
+  clip-path: inset(0 -80px);
+}
+
+.splash-strip span {
+  display: block;
+  height: var(--name);
+  margin-top: calc(var(--name) / -9 * var(--strip));
+}
+
+.splash-strip .splash-ghost {
+  position: absolute;
+  top: 0;
+  color: var(--accent);
+}
+
+.splash-strip .splash-cool,
+.splash-strip .splash-cool b {
+  color: #4fd8ce;
+}
+
+.splash-bar {
+  display: flex;
+  gap: 4px;
+}
+
+.splash-bar i {
+  width: 12px;
+  height: 6px;
+  background: var(--line);
+}
+
+.splash-bar i[data-filled="true"] {
+  background: var(--accent);
+}
+
+@media (max-width: 480px) {
+  .splash {
+    --name: 54px;
+  }
+
+  .splash-bar i {
+    width: 8px;
+  }
+}
+
 /* ---- Narrower ---- */
 
 @media (max-width: 1000px) {
@@ -1122,6 +1242,16 @@ kbd {
 
   .ways > div {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lineage > div {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 4px 16px;
+  }
+
+  .lineage [role="rowheader"],
+  .lineage [role="columnheader"]:first-child {
+    grid-column: 1 / -1;
   }
 
   .closing {

@@ -41,7 +41,7 @@
   --display: "Chakra Petch", "JetBrains Mono", ui-monospace, monospace;
   --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
-  --gutter: 24px;
+  --gutter: clamp(24px, 3vw, 64px);
   --nav: 52px;
   --status: 28px;
 
@@ -146,7 +146,7 @@ kbd {
 
 .wrap {
   width: 100%;
-  max-width: 1328px;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
