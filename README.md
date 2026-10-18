@@ -10,7 +10,13 @@ settings, toasts and the lock screen.
 
 ## Run it
 
-    pnpm install
+Use Node.js 22.12 or newer and pnpm 11.0.0 (pinned in `package.json`). Install
+pnpm with your usual package-manager setup, or use `corepack enable` where available.
+The dependency install must succeed before the build is meaningful. In a restricted
+environment, use a writable pnpm store/cache and allow registry access; do not
+replace missing Vite types with stubs or relax the TypeScript checks.
+
+    pnpm install --frozen-lockfile
     pnpm dev        # http://localhost:5173
     pnpm build      # type-checks, then writes dist/
 
@@ -30,6 +36,9 @@ are plain CSS.
 
 When DEs-UI changes, `src/lib/data.ts` and the screenshots are what to bring up to
 date.
+
+Pull requests run the same frozen dependency install and production build in a
+read-only-permission CI workflow. Publishing runs separately after a push to main.
 
 ## Publishing
 
