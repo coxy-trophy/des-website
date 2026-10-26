@@ -51,7 +51,7 @@ export const SHOTS = [
     label: "Application",
     src: app,
     alt: "A text editor open in the workspace, with two notifications above it",
-    text: "An application takes the workspace and a tab beside the terminal's. What applications announce shows as a toast above whatever is open.",
+    text: "An application takes the workspace and appears in the right panel’s Apps tab. What applications announce shows as a toast above whatever is open.",
   },
   {
     id: "launcher",
@@ -226,7 +226,7 @@ export const NOT_DONE = [
   { name: "Music: queue editing", text: "Removing or reordering, editing playlists, podcasts, followed artists." },
   { name: "Notification icons as SVG", text: "Icons that exist only as drawings are not shown." },
   { name: "Login beyond a password", text: "Accounts that need more than a password cannot sign in from the login screen." },
-  { name: "From eDEX-UI", text: "On-screen keyboard, sound effects, mouse reporting to terminal applications." },
+  { name: "From eDEX-UI", text: "Sound effects and mouse reporting to terminal applications." },
 ];
 
 export const INSTALL_STEPS = [
@@ -248,7 +248,8 @@ export const LINEAGE: [string, string, string][] = [
   ["Other applications", "Stay outside, behind it", "Open inside the frame"],
   ["Settings, lock, login", "Belong to the desktop under it", "Its own"],
   ["Themes", "Its own JSON format", "The same format; eDEX-UI themes work"],
-  ["On-screen keyboard, sounds", "Yes", "Not yet"],
+  ["On-screen keyboard", "Yes", "Yes, for the shell"],
+  ["Sound effects", "Yes", "Not yet"],
   ["Licence", "GPL-3.0", "MIT"],
   ["Status", "Archived in 2021", "In development"],
 ];
